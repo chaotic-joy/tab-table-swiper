@@ -1,8 +1,8 @@
-# Tab Table
+# Tab Table + Swiper
 
 A Chrome extension that shows every open tab across all your windows in one sortable table, and helps you clean them up.
 
-Click the toolbar icon to open Tab Table in a new tab. It has three views: **Open tabs**, **Swipe** and **Recently closed**.
+Click the toolbar icon to open Tab Table + Swiper in a new tab. It has three views: **Open tabs**, **Swipe** and **Recently closed**.
 
 ## Features
 
@@ -13,16 +13,16 @@ Click the toolbar icon to open Tab Table in a new tab. It has three views: **Ope
 - **Duplicates**: tabs with the same URL (ignoring `#fragment`, trailing slash and host case) get an amber stripe and a `×N` badge. **Duplicates only** hides the rest.
 - Each row has **Go** (switch to the tab) and **Close**. Closing shows an **Undo** in the status line, which brings the tabs back unloaded in their original window and position.
 - Updates live as tabs open, close and change.
-- Tab Table's own pages are hidden, so you can't close them by accident.
+- The extension's own pages are hidden, so you can't close them by accident.
 
 ### Swipe
 - One open tab at a time as a card. **←** closes it, **→** keeps it.
 - **Undo** (button, **Z**, **Backspace** or **⌘Z**/**Ctrl+Z**) steps back through decisions. Closed tabs come back unloaded.
-- Cards show the page's Open Graph preview: image, title, description, site name. These need an optional "read all sites" permission, which Tab Table only asks for when you click **Allow** in the Swipe view. Pages are fetched directly from each site without your cookies.
+- Cards show the page's Open Graph preview: image, title, description, site name. These need an optional "read all sites" permission, which Tab Table + Swiper only asks for when you click **Allow** in the Swipe view. Pages are fetched directly from each site without your cookies.
 - Without that permission, cards show the tab's title, icon and URL.
 
 ### Recently closed
-- Every tab closed from Tab Table (table, group button or Swipe), newest first, with when it was closed.
+- Every tab closed from Tab Table + Swiper (table, group button or Swipe), newest first, with when it was closed.
 - **Reopen**, **Forget**, **Reopen all** and **Clear list** (with Undo). Keeps the latest 500 and survives restarts.
 
 ### CSV export and import
@@ -57,7 +57,7 @@ After pulling changes, click the reload icon on the extension's card in `chrome:
 | File | What it does |
 |---|---|
 | `manifest.json` | Extension manifest (MV3) |
-| `background.js` | Opens Tab Table when the toolbar icon is clicked |
+| `background.js` | Opens Tab Table + Swiper when the toolbar icon is clicked |
 | `tabs.html` | Page layout and styles (light and dark) |
 | `tabs.js` | Open tabs table, closing and undo, Recently closed, import/export |
 | `swipe.js` | Swipe view and Open Graph previews |

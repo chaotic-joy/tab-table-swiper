@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Tab Table",
+  "name": "Tab Table + Swiper",
   "version": "1.0",
-  "description": "All open tabs across all windows in one sortable table, with duplicate detection and CSV import/export.",
+  "description": "All open tabs across all windows in one sortable table, plus a swipe mode to keep or close them. Duplicate detection, CSV import/export, recently closed with undo.",
   "permissions": ["tabs", "favicon", "storage"],
   "optional_host_permissions": ["<all_urls>"],
   "action": { "default_title": "Show all tabs" },

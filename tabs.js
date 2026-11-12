@@ -9,7 +9,7 @@ async function load() {
   const tabs = await chrome.tabs.query({});
   const self = chrome.runtime.getURL('');
   const win = new Map();
-  // Hide every Tab Table page (not just this one) so it can't be closed from the table or Swipe.
+  // Hide every Tab Table + Swiper page (not just this one) so it can't be closed from the table or Swipe.
   rows = tabs.filter(t => !(t.url || t.pendingUrl || '').startsWith(self)).map(t => {
     if (!win.has(t.windowId)) win.set(t.windowId, win.size + 1);
     const url = unwrapSuspended(t.url || t.pendingUrl || '');
@@ -85,7 +85,7 @@ async function renderClosed() {
     tr.cells[1].title = c.title;
     tr.cells[2].title = c.url;
     return tr;
-  }) : [el('tr', {}, el('td', { className: 'empty', colSpan: 4, textContent: 'Tabs you close from Tab Table show up here.' }))]));
+  }) : [el('tr', {}, el('td', { className: 'empty', colSpan: 4, textContent: 'Tabs you close from Tab Table + Swiper show up here.' }))]));
 }
 
 $('reopenAll').onclick = async () => reopen(await getClosed());
