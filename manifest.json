@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Table",
+  "version": "1.0",
+  "description": "All open tabs across all windows in one sortable table, with duplicate detection and CSV import/export.",
+  "permissions": ["tabs", "favicon", "storage"],
+  "optional_host_permissions": ["<all_urls>"],
+  "action": { "default_title": "Show all tabs" },
+  "background": { "service_worker": "background.js" }
+}
